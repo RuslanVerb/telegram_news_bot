@@ -1,0 +1,3 @@
+   bot/daily_news.py
+   bot/requirements.txt
+   .github/workflows/daily-news.yml
