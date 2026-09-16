@@ -24,11 +24,15 @@ import requests
 BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 
-# Ключові запити — можна редагувати під потрібні теми
+# Ключові запити — можна редагувати під потрібні теми.
+# "site:validity.com" — окремий запит, що бере тільки свіжі публікації
+# з блогу Validity (у них немає окремого публічного RSS з передбачуваною
+# адресою, тому це найнадійніший спосіб отримувати саме їхній контент).
 KEYWORDS = [
     "email marketing",
     "email deliverability",
     "email marketing automation",
+    "site:validity.com",
 ]
 
 # Довірені джерела — новина публікується, лише якщо Google News
