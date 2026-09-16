@@ -86,6 +86,8 @@ def send_telegram_message(text: str) -> None:
         "parse_mode": "HTML",
         "disable_web_page_preview": False,
     }, timeout=30)
+    if resp.status_code != 200:
+        print("Telegram відповів помилкою:", resp.text)
     resp.raise_for_status()
 
 
